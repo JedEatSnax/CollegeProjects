@@ -1,7 +1,7 @@
 # Singly Linked List in C++
 
 ## Overview
-Using an object-oriented approach, this project implements a **singly linked list** in C++. The linked list supports common operations such as inserting and deleting nodes at various positions, as well as displaying the list. A destructor is also implemented to ensure that all dynamically allocated memory is properly released when the list is no longer in use.
+Using an object-oriented approach, this project implements a **singly linked list** in C++. The linked list supports common operations such as inserting and deleting nodes at various positions and displaying the list. A destructor is also implemented to ensure that all dynamically allocated memory is properly released when the list is no longer used.
 
 ## Data Structure
 
@@ -109,4 +109,4 @@ Using an object-oriented approach, this project implements a **singly linked lis
   Ensures proper cleanup of memory, which is crucial for applications that rely on dynamic memory allocation.
 
 ## References
-Code retrieved from [GeekforGeeks](https://www.geeksforgeeks.org/cpp-linked-list/) with the help of CharGPT and Copilot
+Code retrieved from [GeekforGeeks](https://www.geeksforgeeks.org/cpp-linked-list/) with the help of ChatGPT and Copilot
