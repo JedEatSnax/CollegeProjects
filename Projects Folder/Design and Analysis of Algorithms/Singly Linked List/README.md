@@ -109,4 +109,4 @@ Using an object-oriented approach, this project implements a **singly linked lis
   Ensures proper cleanup of memory, which is crucial for applications that rely on dynamic memory allocation.
 
 ## References
-Code retrieved from [GeekforGeeks](https://www.geeksforgeeks.org/cpp-linked-list/) with the help of ChatGPT and Copilot
+Code retrieved from [GeeksforGeeks](https://www.geeksforgeeks.org/cpp-linked-list/) with the help of ChatGPT and Copilot
