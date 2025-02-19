@@ -68,12 +68,12 @@ The `BinaryTree` class encapsulates the tree operations and maintains a pointer 
 
 ### 1. Insertion
 
-####`insertNode(T value)`
+`insertNode(T value)`
 Inserts a node in level order. If the tree is empty, the new node becomes the root.
 
 ### 2. Deletion
 
-####`deleteNode(T value)`
+`deleteNode(T value)`
 Deletes a node with the specified value using a recursive method. It handles all three cases:
 a. Node with no children.
 b. Node with no child.
@@ -81,7 +81,7 @@ c. Node with two children (using the inorder successor).
 
 ### 3. Searching
 
-####`search(T value)`
+`search(T value)`
 Returns `true` if the value is found in the tree, otherwise it is `false`.
 
 ### 4. Traversal Methods
