@@ -3,6 +3,51 @@
 ## Overview
 Using an object-oriented approach, this project implements a **singly linked list** in C++. The linked list supports common operations such as inserting and deleting nodes at various positions and displaying the list. A destructor is also implemented to ensure that all dynamically allocated memory is properly released when the list is no longer used.
 
+## Code Snippet
+```cpp
+int main() {
+    SinglyLinkedList list;
+
+    // Insert elements at the end
+    list.insertAtEnd(10);
+    list.insertAtEnd(20);
+
+    // Insert element at the beginning
+    list.insertAtBeginning(5);
+
+    // Insert element at a specific position
+    list.insertAtPosition(15, 3);
+
+    cout << "Linked list after insertions: ";
+    list.display();
+
+    // Delete element from the beginning
+    list.deleteFromBeginning();
+    cout << "Linked list after deleting from beginning: ";
+    list.display();
+
+    // Delete element from the end
+    list.deleteFromEnd();
+    cout << "Linked list after deleting from end: ";
+    list.display();
+
+    // Delete element from a specific position
+    list.deleteFromPosition(2);
+    cout << "Linked list after deleting from position 2: ";
+    list.display();
+}
+```
+
+## Output
+```
+Linked list after insertions: 5 -> 10 -> 15 -> 20 -> NULL
+Linked list after deleting from beginning: 10 -> 15 -> 20 -> NULL
+Linked list after deleting from end: 10 -> 15 -> NULL
+Linked list after deleting from position 2: 10 -> NULL
+
+Process finished with exit code 0
+```
+
 ## Data Structure
 
 ### Node Structure
