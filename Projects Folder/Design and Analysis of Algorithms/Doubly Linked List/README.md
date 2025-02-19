@@ -1,7 +1,45 @@
 # Doubly Linked List in C++
 
 ## Overview
-This project implements a **doubly linked list** in C++. It supports operations such as inserting and deleting nodes at different positions, as well as displaying the list in both forward and reverse directions.
+This project implements a **doubly linked list** in C++. It supports operations such as inserting and deleting nodes at different positions and displaying the list in both forward and reverse directions.
+
+## Code Snippet
+```cpp
+int main() {
+    Node* head = nullptr;
+
+    // Insertion Operations
+    insertAtEnd(head, 10);
+    insertAtEnd(head, 20);
+    insertAtBeginning(head, 5);
+    insertAtPosition(head, 15, 2);
+
+    cout << "After Insertions:" << endl;
+    printListForward(head);
+    printListReverse(head);
+
+    // Deletion Operations
+    deleteAtBeginning(head);
+    deleteAtEnd(head);
+    deleteAtPosition(head, 2);
+
+    cout << "After Deletions:" << endl;
+    printListForward(head);
+
+    return 0;
+}
+```
+
+## Output
+```
+After Insertions:
+Forward List: 5 15 10 20
+Reverse List: 20 10 15 5
+After Deletions:
+Forward List: 15
+
+Process finished with exit code 0
+```
 
 ## Data Structure
 
