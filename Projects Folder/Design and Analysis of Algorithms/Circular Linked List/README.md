@@ -70,6 +70,7 @@ The `CircularLinkedList` class encapsulates all the operations on the circular l
 ## Operations and Their Processes
 
 ### 1. Insertion Operations
+
 #### `insertAtFirst(T value):`
 - Inserts a new node at the beginning of the list.
 
@@ -80,6 +81,7 @@ The `CircularLinkedList` class encapsulates all the operations on the circular l
 - Inserts a new node at the specified 1-based position. If the position is less than or equal to 1 or the list is empty, it defaults to inserting at the beginning.
 
 ### 2. Deletion Operations
+
 #### `deleteFromFirst():`
 - Removes the first node in the list and updates the head pointer accordingly.
 
@@ -90,6 +92,7 @@ The `CircularLinkedList` class encapsulates all the operations on the circular l
 - Deletes the node that contains the specified key (value).
 
 ### 3. Display Operation
+
 #### `display():`
 - Traverses the list and prints the data of each node in order, ending with a marker indicating the list is circular (i.e., HEAD).
 
