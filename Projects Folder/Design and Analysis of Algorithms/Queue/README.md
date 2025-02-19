@@ -59,4 +59,5 @@ Process finished with exit code 0
 - **Swapping Queues:** Exchanging the contents of two queues using `swap()`.
 - **Queue Display:** A custom function `showQueue()` that prints the entire queue.
 
-## Code Overview
+## References
+Code retrieved from [GeeksforGeeks](https://www.geeksforgeeks.org/queue-cpp-stl/) with the help of ChatGPT and Copilot
