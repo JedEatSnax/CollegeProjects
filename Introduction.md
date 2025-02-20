@@ -9,5 +9,5 @@ My coding projects for STI Pasay-EDSA
 - Doubly Linked List
 - Circular Linked List
 - Queue
-- [Binary Tree](Projects Folder/Data Structures (C++)/Binary Tree)
+- [Binary Tree](Projects Folder/Data Structures (C++)/Binary Tree/README.md)
 - Unordered Graph
