@@ -5,7 +5,7 @@ My coding projects for STI Pasay-EDSA
 ## Most Relevant
 
 ### Data Structures (C++)
-- Singly Linked List
+- [Singly Linked List](Projects Folder/Data Structures (C++)/Singly Linked List/README.md)
 - Doubly Linked List
 - Circular Linked List
 - Queue
