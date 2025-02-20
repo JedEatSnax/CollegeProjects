@@ -1,7 +1,7 @@
 # Binary Tree Implementation in C++
 
 ## Overview
-This project demonstrates a generic implementation of a **Binary Tree** in C++ using templates. The implementation includes operations for inserting nodes (using level order insertion), deleting nodes (with recursive deletion), searching for a value, and traversing the tree in various orders (inorder, preorder, postorder, and level order). This code serves as an excellent learning resource for understanding tree data structures and recursion in C++.
+This project uses templates to demonstrate a generic implementation of a **Binary Tree** in C++. The implementation includes operations for inserting nodes (using level order insertion), deleting nodes (with recursive deletion), searching for a value, and traversing the tree in various orders (inorder, preorder, postorder, and level order). This code is an excellent learning resource for understanding tree data structures and recursion in C++.
 
 ## Code Snippet
 ```cpp
@@ -54,14 +54,14 @@ Process finished with exit code 0
 ## Data Structures
 
 ### Node Class (Template)
-Each node in the binary tree is represented by the `Node` class:
+The `Node` class represents each node in the binary tree:
 - **data**: The value stored in the node (of generic type `T`).
 - **left**: Pointer to the left child.
 - **right**: Pointer to the right child.
 
 ## BinaryTree Class (Template)
 The `BinaryTree` class encapsulates the tree operations and maintains a pointer to the root of the node:
-- **rot**: Pointer to the root node.
+- **root**: Pointer to the root node.
 - **Destructor** Cleans up the tree by repeatedly deleting nodes.
 
 ## Operations and Their Processes
