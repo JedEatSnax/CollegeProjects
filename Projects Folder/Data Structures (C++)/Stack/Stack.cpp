@@ -21,10 +21,10 @@ int main() {
 
     cout << endl;
     if (myStack.empty() == false) {
-        cout << "Stack is empty" << endl;
+        cout << "Stack is not empty" << endl;
     }
     else {
-        cout << "Stack is not empty" << endl;
+        cout << "Stack is empty" << endl;
     }
 
     return 0;
