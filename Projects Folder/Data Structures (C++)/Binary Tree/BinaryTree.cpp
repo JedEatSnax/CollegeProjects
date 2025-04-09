@@ -1,5 +1,8 @@
 #include <iostream>
 #include <queue>
+#include <windows.h>
+#include <psapi.h>
+
 using namespace std;
 
 template <typename T>
@@ -161,6 +164,11 @@ public:
         }
         cout << endl;
     }
+    void printMemoryUsage() {
+        PROCESS_MEMORY_COUNTERS pmc;
+        GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+        std::cout << "Peak RAM used: " << pmc.PeakWorkingSetSize / 1024 << " KB\n";
+    }
 };
 
 int main() {
@@ -191,6 +199,8 @@ int main() {
     tree.deleteNode(3);
     cout << "Inorder traversal after removing 3: ";
     tree.inorder();
+
+    tree.printMemoryUsage();
 
     return 0;
 }
