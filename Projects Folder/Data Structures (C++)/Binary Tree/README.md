@@ -4,7 +4,7 @@
 This project uses templates to demonstrate a generic C++ implementation of a **Binary Tree** in C++. The implementation includes operations for inserting nodes (using level order insertion), deleting nodes (with recursive deletion), searching for a value, and traversing the tree in various orders (inorder, preorder, postorder, and level order). This code is an excellent learning resource for understanding tree data structures and recursion in C++.
 
 ## Midterms Analysis
-After running the program 5 times, `printMemoryUsage()` shows an average of 3471.2 KBs peak RAM usage. In addition, the program was run 5 times on [Jdoodle](https://www.jdoodle.com/online-compiler-c++) and was compiled and executed in an average of 2.048 seconds. Lastly, the worst time complexity of the program is O(n).
+After running the program 5 times, `printMemoryUsage()` shows an average of 3471.2 KBs peak RAM usage. In addition, the program was run 5 times on [JDoodle](https://www.jdoodle.com/online-compiler-c++) and was compiled and executed in an average of 2.048 seconds. Lastly, the worst time complexity of the program is O(n).
 
 
 ## Code Snippet
