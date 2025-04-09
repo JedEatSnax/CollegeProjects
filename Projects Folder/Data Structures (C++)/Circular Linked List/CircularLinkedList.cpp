@@ -1,4 +1,6 @@
 #include <iostream>
+#include <windows.h>
+#include <psapi.h>
 using namespace std;
 
 template <typename T> class Node {
@@ -154,6 +156,11 @@ public:
         } while (temp != head);
         cout << "HEAD" << endl;
     }
+    void printMemoryUsage() {
+        PROCESS_MEMORY_COUNTERS pmc;
+        GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+        std::cout << "Peak RAM used: " << pmc.PeakWorkingSetSize / 1024 << " KB\n";
+    }
 };
 
 int main()
@@ -186,6 +193,8 @@ int main()
     cout << "Circular linked list after deleting node with key 30:" << endl;
     cll.deleteByKey(30);
     cll.display();
+
+    cll.printMemoryUsage();
 
     return 0;
 }
