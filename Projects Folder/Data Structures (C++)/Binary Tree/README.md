@@ -1,7 +1,11 @@
 # Binary Tree Implementation in C++
 
 ## Overview
-This project uses templates to demonstrate a generic implementation of a **Binary Tree** in C++. The implementation includes operations for inserting nodes (using level order insertion), deleting nodes (with recursive deletion), searching for a value, and traversing the tree in various orders (inorder, preorder, postorder, and level order). This code is an excellent learning resource for understanding tree data structures and recursion in C++.
+This project uses templates to demonstrate a generic C++ implementation of a **Binary Tree** in C++. The implementation includes operations for inserting nodes (using level order insertion), deleting nodes (with recursive deletion), searching for a value, and traversing the tree in various orders (inorder, preorder, postorder, and level order). This code is an excellent learning resource for understanding tree data structures and recursion in C++.
+
+## Midterms Analysis
+After running the program 5 times, `printMemoryUsage()` shows an average of 3471.2 peak RAM usage. In addition, the program was run 5 times on [Jdoodle](https://www.jdoodle.com/online-compiler-c++) and was compiled and executed in an average of 2.048 seconds.
+
 
 ## Code Snippet
 ```cpp
@@ -47,6 +51,7 @@ Level order traversal: 1 2 3 4 5 6
 Searching for 7: Not Found
 Searching for 6: Found
 Inorder traversal after removing 3: 4 2 5 1 6
+Peak RAM used: 3472 KB
 
 Process finished with exit code 0
 ```
