@@ -3,6 +3,9 @@
 ## Overview
 This project implements a **doubly linked list** in C++. It supports operations such as inserting and deleting nodes at different positions and displaying the list in both forward and reverse directions.
 
+## Midterms Analysis
+After running the program 5 times, `printMemoryUsage()` shows an average of 3448 KBs peak RAM usage. In addition, the program was run 5 times on [JDoodle](https://www.jdoodle.com/online-compiler-c++) and was compiled and executed in an average of 1.6224 seconds. Lastly, the worst time complexity of the program is O(n).
+
 ## Code Snippet
 ```cpp
 int main() {
@@ -26,6 +29,8 @@ int main() {
     cout << "After Deletions:" << endl;
     printListForward(head);
 
+    printMemoryUsage();
+
     return 0;
 }
 ```
@@ -37,6 +42,7 @@ Forward List: 5 15 10 20
 Reverse List: 20 10 15 5
 After Deletions:
 Forward List: 15
+Peak RAM used: 3448 KB
 
 Process finished with exit code 0
 ```
