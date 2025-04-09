@@ -1,4 +1,6 @@
 #include <iostream>
+#include <windows.h>
+#include <psapi.h>
 using namespace std;
 
 class Node {
@@ -146,6 +148,12 @@ void printListReverse(Node* head) {
     cout << endl;
 }
 
+void printMemoryUsage() {
+    PROCESS_MEMORY_COUNTERS pmc;
+    GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+    std::cout << "Peak RAM used: " << pmc.PeakWorkingSetSize / 1024 << " KB\n";
+}
+
 int main() {
     Node* head = nullptr;
 
@@ -166,6 +174,8 @@ int main() {
 
     cout << "After Deletions:" << endl;
     printListForward(head);
+
+    printMemoryUsage();
 
     return 0;
 }
