@@ -3,6 +3,9 @@
 ## Overview
 This project demonstrates a generic implementation of a **Circular Linked List** in C++ using templates. The implementation supports common operations such as insertion, deletion, and display of the list. The list is circular, meaning the last node points back to the head, and is designed to handle different data types through C++ templates.
 
+## Midterms Analysis
+After running the program 5 times, `printMemoryUsage()` shows an average of 3461.6 KBs peak RAM usage. In addition, the program was run 5 times on [JDoodle](https://www.jdoodle.com/online-compiler-c++) and was compiled and executed in an average of 2.6024 seconds. Lastly, the worst time complexity of the program is O(n).
+
 ## Code Snippet
 ```cpp
 int main()
@@ -36,6 +39,8 @@ int main()
     cll.deleteByKey(30);
     cll.display();
 
+    cll.printMemoryUsage();
+
     return 0;
 }
 ```
@@ -50,6 +55,7 @@ Circular linked list after deleting the last node:
 15 -> 20 -> 30 -> 40 -> HEAD
 Circular linked list after deleting node with key 30:
 15 -> 20 -> 40 -> HEAD
+Peak RAM used: 3460 KB
 
 Process finished with exit code 0
 ```
