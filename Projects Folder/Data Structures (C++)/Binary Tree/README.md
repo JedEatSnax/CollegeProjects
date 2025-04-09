@@ -38,6 +38,8 @@ int main() {
     cout << "Inorder traversal after removing 3: ";
     tree.inorder();
 
+    tree.printMemoryUsage();
+
     return 0;
 }
 ```
