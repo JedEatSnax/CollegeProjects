@@ -3,6 +3,9 @@
 ## Overview
 This project demonstrates using the C++ Standard Library `std::queue` container. The program illustrates basic queue operations such as insertion, deletion, swapping, and displaying the contents of a queue. It uses a helper function to print the queue's contents without modifying the original queue.
 
+## Midterms Analysis
+After running the program 5 times, `printMemoryUsage()` shows an average of 3482.2 KBs peak RAM usage. In addition, the program was run 5 times on [JDoodle](https://www.jdoodle.com/online-compiler-c++) and was compiled and executed in an average of 1.8936 seconds. Lastly, the worst time complexity of the program is O(n).
+
 ## Code Snippet
 ```cpp
 int main() {
@@ -34,6 +37,8 @@ int main() {
     cout << "After popping the front element from myQueue, it is now: ";
     showQueue(myQueue);
 
+    printMemoryUsage();
+
     return 0;
 }
 ```
@@ -48,6 +53,7 @@ After swapping the contents of myQueue and myQueue2:
 myQueue front: 100
 myQueue2 front: 10
 After popping the front element from myQueue, it is now: 200 300
+Peak RAM used: 3484 KB
 
 Process finished with exit code 0
 ```
