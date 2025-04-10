@@ -3,6 +3,9 @@
 ## Overview
 This project demonstrates the usage of the C++ Standard Library's `std::stack` container.
 
+## Midterms Analysis
+After running the program 5 times, `printMemoryUsage()` shows an average of 3472.8 KBs peak RAM usage. In addition, the program was run 5 times on [JDoodle](https://www.jdoodle.com/online-compiler-c++) and was compiled and executed in an average of 1.661 seconds. Lastly, the worst time complexity of the program is O(n).
+
 ## Code Snippet
 ```cpp
 int main() {
@@ -30,6 +33,8 @@ int main() {
         cout << "Stack is empty" << endl;
     }
 
+    printMemoryUsage();
+
     return 0;
 }
 ```
@@ -40,6 +45,7 @@ Size of stack: 5
 Top element: 5
 Stack elements: 5 4 3 2 1
 Stack is empty
+Peak RAM used: 3468 KB
 
 Process finished with exit code 0
 ```
