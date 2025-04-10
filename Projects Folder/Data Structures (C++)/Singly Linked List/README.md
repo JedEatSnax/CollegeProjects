@@ -3,6 +3,9 @@
 ## Overview
 Using an object-oriented approach, this project implements a **singly linked list** in C++. The linked list supports common operations such as inserting and deleting nodes at various positions and displaying the list. A destructor is also implemented to ensure that all dynamically allocated memory is properly released when the list is no longer used.
 
+## Midterms Analysis
+After running the program 5 times, `printMemoryUsage()` shows an average of 3454.4 KBs peak RAM usage. In addition, the program was run 5 times on [JDoodle](https://www.jdoodle.com/online-compiler-c++) and was compiled and executed in an average of 1.605 sec
+
 ## Code Snippet
 ```cpp
 int main() {
@@ -35,6 +38,8 @@ int main() {
     list.deleteFromPosition(2);
     cout << "Linked list after deleting from position 2: ";
     list.display();
+
+    list.printMemoryUsage();
 }
 ```
 
@@ -44,6 +49,7 @@ Linked list after insertions: 5 -> 10 -> 15 -> 20 -> NULL
 Linked list after deleting from beginning: 10 -> 15 -> 20 -> NULL
 Linked list after deleting from end: 10 -> 15 -> NULL
 Linked list after deleting from position 2: 10 -> NULL
+Peak RAM used: 3452 KB
 
 Process finished with exit code 0
 ```
