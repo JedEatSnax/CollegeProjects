@@ -1,6 +1,15 @@
 #include <iostream>
 #include <stack>
+#include <windows.h>
+#include <psapi.h>
+
 using namespace std;
+
+void printMemoryUsage() {
+    PROCESS_MEMORY_COUNTERS pmc;
+    GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+    std::cout << "Peak RAM used: " << pmc.PeakWorkingSetSize / 1024 << " KB\n";
+}
 
 int main() {
     stack<int> myStack;
@@ -26,6 +35,8 @@ int main() {
     else {
         cout << "Stack is empty" << endl;
     }
+
+    printMemoryUsage();
 
     return 0;
 }
