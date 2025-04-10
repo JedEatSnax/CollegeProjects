@@ -3,6 +3,10 @@
 ## Overview
 This project implements a simple **Graph** using an adjacency matrix in C++. The graph is represented as a two-dimensional vector, where each cell indicates the weight of the edge between two vertices. This implementation is for an **undirected** graph, meaning each edge is bidirectional.
 
+## Midterms Analysis
+After running the program 5 times, `printMemoryUsage()` shows an average of 3463.2 KBs peak RAM usage. In addition, the program was run 5 times on [JDoodle](https://www.jdoodle.com/online-compiler-c++) and was compiled and executed in an average of 1.9052 seconds. Lastly, the worst time complexity of the program is O(n²).
+.
+
 ## Code Snippet
 ```cpp
 int main() {
@@ -15,6 +19,9 @@ int main() {
     graph.addEdge(2, 3);
 
     graph.printGraph();
+
+    graph.printMemoryUsage();
+
     return 0;
 }
 ```
@@ -29,6 +36,7 @@ Adjacency Matrix for the Undirected Graph:
 0 0 0 0 0 0 0
 0 0 0 0 0 0 0
 0 0 0 0 0 0 0
+Peak RAM used: 3468 KB
 
 Process finished with exit code 0
 ```
