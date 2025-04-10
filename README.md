@@ -8,3 +8,4 @@ My coding projects for STI Pasay-EDSA
 ### [Queue](Projects%20Folder/Data%20Structures%20%28C%2B%2B%29/Queue/README.md)
 ### [Undirected Graph](Projects%20Folder/Data%20Structures%20%28C%2B%2B%29/Undirected%20Graph/README.md)
 ### [Binary Tree](Projects%20Folder/Data%20Structures%20%28C%2B%2B%29/Binary%20Tree/README.md)
+### [Stack](Projects%20Folder/Data%20Structures%20%28C%2B%2B%29/Stack/README.md)
