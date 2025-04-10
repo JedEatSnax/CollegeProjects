@@ -1,4 +1,7 @@
 #include <iostream>
+#include <windows.h>
+#include <psapi.h>
+
 using namespace std;
 
 struct Node {
@@ -147,6 +150,12 @@ public:
         }
         cout << "NULL" << endl;
     }
+
+    void printMemoryUsage() {
+        PROCESS_MEMORY_COUNTERS pmc;
+        GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+        std::cout << "Peak RAM used: " << pmc.PeakWorkingSetSize / 1024 << " KB\n";
+    }
 };
 
 int main() {
@@ -179,5 +188,7 @@ int main() {
     list.deleteFromPosition(2);
     cout << "Linked list after deleting from position 2: ";
     list.display();
+
+    list.printMemoryUsage();
 
 }
