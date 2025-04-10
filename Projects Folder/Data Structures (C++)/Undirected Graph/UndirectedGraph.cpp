@@ -1,6 +1,8 @@
-// C++ Program to Implement a Graph Using Adjacency Matrix
 #include <iostream>
 #include <vector>
+#include <windows.h>
+#include <psapi.h>
+
 using namespace std;
 
 class UndirectedGraph {
@@ -28,7 +30,13 @@ public:
             cout << "\n";
         }
     }
-    
+
+    void printMemoryUsage() {
+        PROCESS_MEMORY_COUNTERS pmc;
+        GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+        std::cout << "Peak RAM used: " << pmc.PeakWorkingSetSize / 1024 << " KB\n";
+    }
+
 };
 
 int main() {
@@ -41,5 +49,8 @@ int main() {
     graph.addEdge(2, 3);
 
     graph.printGraph();
+
+    graph.printMemoryUsage();
+    
     return 0;
 }
