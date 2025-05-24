@@ -1,0 +1,89 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: keenservice1
+  namespace: dosbox
+  labels:
+    app: keenservice1
+spec:
+  type: ClusterIP                   # ← changed from LoadBalancer
+  selector:
+    app: keen1
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: keenipxservice1
+  namespace: dosbox
+spec:
+  type: ClusterIP
+  selector:
+    app: keen1
+  ports:
+    - protocol: UDP
+      port: 80
+      targetPort: 19900
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keen1
+  namespace: dosbox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keen1
+  template:
+    metadata:
+      labels:
+        app: keen1
+    spec:
+      containers:
+        - name: keen-kontainer
+          image: "blaize/keen"
+          ports:
+            - containerPort: 80
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: keen-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: keen-tls-secret  
+    hosts:
+    - "*"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: keen-virtualservice
+  namespace: istio-system
+spec:
+  gateways:
+    - keen-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: keenservice1.dosbox.svc.cluster.local
+            port:
+              number: 80
