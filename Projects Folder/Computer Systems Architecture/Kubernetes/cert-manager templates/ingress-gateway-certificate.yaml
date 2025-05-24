@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ingressgateway-certificate
+  namespace: <your-namespace>
+spec:
+  secretName: ingressgateway-certificate-secret
+  issuerRef:
+    name: cloudflare-cluster-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - "<dns-name>"
