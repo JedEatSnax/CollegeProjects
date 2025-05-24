@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: keenservice1
+  namespace: dosbox
+  labels:
+    app: keenservice1
+spec:
+  type: ClusterIP                   # ← changed from LoadBalancer
+  selector:
+    app: keen1
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: keenipxservice1
+  namespace: dosbox
+spec:
+  type: ClusterIP
+  selector:
+    app: keen1
+  ports:
+    - protocol: UDP
+      port: 80
+      targetPort: 19900
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keen1
+  namespace: dosbox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keen1
+  template:
+    metadata:
+      labels:
+        app: keen1
+    spec:
+      containers:
+        - name: keen-kontainer
+          image: "blaize/keen"
+          ports:
+            - containerPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keen-ingress
+  namespace: dosbox
+spec:
+  ingressClassName: ngrok
+  rules:
+  - host: <your-ngrok-hostname>
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: keenservice1
+            port: 
+              number: 80
