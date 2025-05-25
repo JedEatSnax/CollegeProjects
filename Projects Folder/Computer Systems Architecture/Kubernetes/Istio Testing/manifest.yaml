@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend5
+  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend3
+  template:
+    metadata:
+      labels:
+        app: frontend3
+    spec:
+      containers:
+      - name: devopspod
+        image: nginx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-lb
+  
+spec:
+  selector:
+    app: frontend3
+  ports:
+    - name: http
+      port: 80         # Service Port (Cluster IP)
+      targetPort: 80   # Container Port (nginx listens on 80 by default)
